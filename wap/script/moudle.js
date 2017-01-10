@@ -60,7 +60,7 @@ function setListIteam(page){
 			.replace( /\{questionnum\}/g,getList[i].questionnum )
 			.replace( /\{title\}/g,getList[i].title )
 			.replace( /\{oname\}/g,getList[i].oname )
-			.replace( /\{createtime\}/g,getList[i].createtime );
+			.replace( /\{createtime\}/g,getList[i].createtime.split(" ")[0] );
 		html.push(html_iteam); //push()	向数组的末尾添加一个或更多元素，并返回新的长度。 --fyq
 	}
 	
@@ -130,7 +130,7 @@ function setSearchListIteam(searchtitle){
 			.replace( /\{questionnum\}/g,getList[i].questionnum )
 			.replace( /\{title\}/g,getList[i].title )
 			.replace( /\{oname\}/g,getList[i].oname )
-			.replace( /\{createtime\}/g,getList[i].createtime );
+			.replace( /\{createtime\}/g,getList[i].createtime.split(" ")[0] );
 		html.push(html_iteam); //push()	向数组的末尾添加一个或更多元素，并返回新的长度。 --fyq
 	}
 	

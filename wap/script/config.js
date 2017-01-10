@@ -180,7 +180,7 @@ var commonFunction = {
 	        cache : false,  
 			async : false,  
 			success:function(data){
-//				alert("result:" +JSON.stringify(data));
+//				alert("result:" +"data:"+data+JSON.stringify(data));
 				data=data.result;
 				//服务器返回响应	
 //				alert("33");
