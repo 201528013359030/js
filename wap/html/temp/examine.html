@@ -1,0 +1,129 @@
+<div id="tpl_first" style="display: none;">
+	<div class="app_top_lead app_round content-margined">
+		{bank}
+	</div>
+	<div class="weui_cells app_round content-margined app_cell_pad text_center">
+		<div class="weui_cell">	    
+		    <div class="weui_cell_bd weui_cell_primary">
+		      	<p>题目个数</p>
+		    </div>	    
+		</div>
+		<div class="weui_cell">	    
+		    <div class="weui_cell_bd weui_cell_primary">
+		      	<p class="ui-txt-default">{questionnum}题</p>
+		    </div>	    
+		</div>
+	</div>
+	<div class="app_lead"><span class="ui-txt-warning">注意：</span>答题结束后，必须点击交卷按钮才能保留成绩</div>	
+	<div class="weui_msg">
+		<div class="weui_icon_area app_note_img"><img src="../images/pic_1.png" class="img-responsed" /></div>
+		<div class="weui_text_area">
+		<p class="weui_msg_desc">您是第一个开始答题的，好腻害啊！</p>
+		</div>
+		<a href="#begin_{bankid}" id="J_begin" class="weui_btn weui_btn_primary">开始答题</a>
+	</div>
+</div>
+
+<div id="tpl_second_first" style="display: none;">
+	<div class="app_top_lead app_round content-margined">
+		{bank}
+	</div>
+	<div class="weui_cells app_round content-margined app_cell_pad">
+		<div class="weui_cell">	    
+		    <div class="weui_cell_bd weui_cell_primary">
+		      	<p class="ui-txt-info">题目个数:</p>
+		    </div>
+		    <div class="weui_cell_ft">
+		    	<span class="ui-txt-default"><i class="ui-txt-warning">{questionnum}</i>题</span>
+		    </div>
+		</div>		
+	</div>
+	
+</div>
+
+<div id="tpl_second" style="display: none;">
+	<div class="app_top_lead app_round content-margined">
+		{bank}
+	</div>
+	<div class="weui_cells app_round content-margined app_cell_pad">
+		<div class="weui_cell">	    
+		    <div class="weui_cell_bd weui_cell_primary">
+		      	<p class="ui-txt-info">题目个数:</p>
+		    </div>
+		    <div class="weui_cell_ft">
+		    	<span class="ui-txt-default"><i class="ui-txt-warning">{questionnum}</i>题</span>
+		    </div>
+		</div>
+		<div class="weui_cell">	    
+		    <div class="weui_cell_bd weui_cell_primary">
+		      	<p class="ui-txt-info">已答次数:</p>
+		    </div>
+		    <div class="weui_cell_ft">
+		    	<span class="ui-txt-default"><i class="ui-txt-warning">{count}</i>次</span>
+		    </div>
+		</div>
+		<div class="weui_cell">	    
+		    <div class="weui_cell_bd weui_cell_primary">
+		      	<p class="ui-txt-info">最好成绩:</p>
+		    </div>
+		    <div class="weui_cell_ft">
+		    	<span class="ui-txt-default">对<i class="ui-txt-warning">{correctNum}</i>题，错<i class="ui-txt-warning">{falseNuM}</i>题</span>
+		    </div>
+		</div>
+		<div class="weui_cell">	    
+		    <div class="weui_cell_bd weui_cell_primary">
+		      	<p class="ui-txt-info">我的排名:</p>
+		    </div>
+		    <div class="weui_cell_ft">
+		    	<span class="ui-txt-default">第<i class="ui-txt-warning">{ranking}</i>名，已答<i class="ui-txt-warning">{sum}</i>人</span>
+		    </div>
+		</div>
+	</div>
+	
+</div>
+
+<div id="tpl_defalut_btn" style="display: none;">
+	<div class="app_btn_box">
+		<div class="weui-col-50">
+			<a href="#begin_{bankid}" class="weui_btn weui_btn_primary">开始答题</a>
+		</div>
+		<div class="weui-col-50">
+			<a href="#overview_{bankid}" id="J_viewError" class="weui_btn weui_btn_warn" style="display: none">查看错题</a>
+			<a href="javascript:void(0)" id="J_viewDisable" class="weui_btn weui_btn_disabled weui_btn_default">查看错题</a>
+		</div>
+	</div>
+</div>
+
+<div id="tpl_continue_btn" style="display: none;">
+	<div class="app_btn_box">
+		<div class="weui-col">
+			<a id="J_restar" href="javascript:;" class="weui_btn weui_btn_primary weui-w-sm">重新开始</a>
+			<a id="J_continue" href="javascript:;" class="weui_btn weui_btn_yellow weui-w-md">继续上次答题</a>
+			<a href="#overview_{bankid}"  id="J_viewError" class="weui_btn weui_btn_warn weui-w-sm"  style="display: none">查看错题</a>
+			<a href="javascript:void(0)" id="J_viewDisable" class="weui_btn weui_btn_disabled weui_btn_default">查看错题</a>
+		</div>
+	</div>
+</div>
+
+<div class="pageloading" style="display:block;">
+	<img src="../images/loading.gif">
+	<p>加载中</p>
+</div>
+
+<div id="page_innerContent" style="display:none;">
+	<div class="app_top_lead app_round content-margined">
+		&nbsp;
+	</div>
+</div>
+<div id="tpl_echarts" style="opacity: 0;">
+	<div class="app_charts app_round content-margined app_cell_pad">
+		<div id="J_c" class="topListCharts"></div>
+		<a href="#ranking_{bankid}" id="J_viewRank" class="weui_btn weui_btn_plain_orange">查看更多排名</a>
+	</div>
+</div>
+
+
+
+
+
+

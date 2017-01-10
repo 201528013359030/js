@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+</head>
+<body>
+
+	<div class="app_charts app_round content-margined app_cell_pad">
+		<div id="J_charts" class="topListCharts" style="width:500px; height: 500px;"></div>
+		<a href="#ranking" class="weui_btn weui_btn_plain_orange">查看更多排名</a>
+	</div>
+
+<script src="../script/lib/echarts.min.js" type="text/javascript"></script>
+<script>
+
+var myChart = echarts.init(document.getElementById('J_charts'));
+	console.log(myChart);
+    // 指定图表的配置项和数据
+    var option = {
+    	title:{
+    		left:'center',
+    		text:'答题排行榜'
+    	},
+    	color:['#FF7143'],
+        xAxis: {
+            data: ['李涛x','方亮','雪纺衫','裤子','高跟鞋']
+        },
+        yAxis: {},
+        series: [{
+            name: '题数',
+            type: 'bar',
+            barWidth: '50%',
+            data: [5, 20, 36, 10, 10]
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+</script>
+</body>
+</html>

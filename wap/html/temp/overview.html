@@ -1,0 +1,60 @@
+<div id="tpl_question" style="display: none;">
+	<div class="app_content_top">
+		{questionflag}<br>
+		{question_num}. {question}
+	</div>	
+	<div class="app_exam_form">
+		{question_list}
+	</div>
+	<div class="app_information">
+		<div class="title"><span class="fr ui-badge">您选择了{answerYours}</span>正确答案：{answerCorrect}</div>
+		{analysis}
+	</div>
+	
+</div>
+
+<div id="tpl_radio" style="display: none;">
+	<p class="multiRadio">
+		<input type="radio" name="duty" value="{option}" class="inp_check input{option}" disabled>
+		<a href="javascript:void(0);" class="link_check">
+			<span class="ficon icon-ok"></span>
+			<span class="icons icons-circal"></span>
+			<span class="text {option}">{option}.{answer}</span>
+		</a>
+	</p>
+</div>
+
+<div id="tpl_checkbox" style="display: none;">
+	<p class="multiRadio">
+		<input type="checkbox" name="duty" value="{option}" class="inp_check input{option}" disabled>
+		<a href="javascript:void(0);" class="link_check">
+			<span class="ficon icon-ok"></span>
+			<span class="icons icons-circal"></span>
+			<span class="text {option}">{option}.{answer}</span>
+		</a>
+	</p>
+</div>
+
+<div id="tpl_btn" style="display: none;">
+	<div class="app_btn_box">
+		<div class="weui-col">
+			<a id="J_prev" href="javascript:;" class="weui_btn weui_btn_yellow">上一题</a>
+			<a id="J_next" href="javascript:;" class="weui_btn weui_btn_warn">下一题</a>
+			<a id="J_goback" data-bankid="{bankid}" href="javascript:;" class="weui_btn weui_btn_plain_primary">返回</a>
+		</div>
+		<!--<div class="weui-col-30">
+			<a id="J_prev" href="javascript:;" class="weui_btn weui_btn_yellow">上一题</a>
+		</div>
+		<div class="weui-col-30">
+			<a id="J_next" href="javascript:;" class="weui_btn weui_btn_warn">下一题</a>
+		</div>-->
+	</div>
+</div>
+
+<div class="pageloading" style="display:block;">
+	<img src="../images/loading.gif">
+	<p>加载中</p>
+</div>
+<div id="page_innerContent" class="page_innerContent" style="display: none;">
+	
+</div>

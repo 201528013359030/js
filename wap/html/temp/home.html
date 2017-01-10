@@ -1,0 +1,49 @@
+<style>    html,body{        margin:0;        padding:0;        font-family:"微软雅黑";        background:#eeeeee;    }    .weui_search_bar{        margin-bottom:10px;    }    .weui-row a{        display:block;    }    .weui-row a{        display:block;    }    .weui_search_outer,.weui_search_focusing .weui_search_outer{        background:#EFEFF4;    }    .weui_search_inner,.weui_search_focusing .weui_search_inner{        background:#EFEFF4;    }    .weui_search_text,.weui_search_focusing .weui_search_text{        border-radius:32px;        background:#fff;    }    .weui_search_focusing .weui_search_inner{        background:#fff;    }    .weui_search_cancel{        color:#00a5e0;    }    .party-question-list-box{        display:block;        margin:0 10px 6px 10px;        padding:6px 10px;        background-color:#fff;    }    .party-question-list-head{        overflow:hidden;    }    .party-question-list-num{        float:left;        background:#cf2226;        font-size:12px;        color:white;        line-height:16px;        padding:0 2px;        margin-top:2px;        margin-right:4px;    }    .party-question-list-title{        float:left;        font-size:15px;        line-height:20px;        color:#333;    }    .party-question-list-time{        font-size:13px;        color:#999;        padding:4px 0 4px 21px;    }    .party-question-list-mem{        font-size:13px;        color:#cf2226;        padding-left:21px;    }</style><div id="tpl_list_iteam" style="display: none;">
+	<a href="#examine_{bankid}" class="weui_cell">
+	    <div class="weui_cell_hd">
+	    	<img {pic} style="width:80px; height: 60px; margin-right:24px;display:block; background-color: #090">
+	    </div>
+	    <div class="weui_cell_bd">
+	    	<h4 class="weui_cell_title"><div class="ui-badge">{questionnum}</div>&nbsp;{title}</h4>
+	    	<p class="weui_cell_desc">
+	      		<span class="ui-txt-muted">{oname} </span>&nbsp;&nbsp;&nbsp;&nbsp;
+	      		<span class="ui-txt-muted">{createtime}</span>
+	    	</p>		          
+	    </div>
+	</a>
+</div>
+
+<div class="pageloading" style="display:block;">
+	<img src="../images/loading.gif">
+	<p>加载中</p>
+</div>
+
+<div id="page_innerContent" class="page_innerContent" style="display:none;">
+	<div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active refresh-top">
+	
+	<div class="weui-pull-to-refresh-layer">
+		<div class="pull-to-refresh-arrow"></div>
+		<div class="pull-to-refresh-preloader"></div>
+		<div class="down">下拉刷新</div>
+		<div class="up">释放刷新</div>
+		<div class="refresh">正在刷新...</div>
+	</div>	
+	<div class="weui_cells weui_cells_access noMgTop app_cells_box">
+		<!-- <img src="../images/banner.png" class="img-responsed" style="margin-top:-1px;">  -->		 <!--搜索栏-->            <div class="weui_search_bar" id="search_bar">                <form class="weui_search_outer">                    <div class="weui_search_inner">                        <i class="weui_icon_search"></i>                        <input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required/>                                            </div>                    <label for="search_input" class="weui_search_text" id="search_text">                        <i class="weui_icon_search"></i>                        <span>请输入要搜索的关键字</span>                    </label>                </form>                <a href="javascript:" class="weui_icon_clear" id="search_clear"> 搜索 &nbsp</a>                <a href="javascript:" class="weui_search_cancel" id="search_cancel" > 取消</a>            </div>
+		<div id="J_listGroup" class="listGroup">
+			
+		</div>
+	</div>
+	
+	<div class="weui-infinite-scroll resultEnd" style="display:block;">
+		<div class="infinite-preloader"></div>
+		正在加载...
+	</div>
+	<div class="resultEnd_nodata text_center ui-txt-muted" style="display:none;">
+		&nbsp;
+	</div>
+	
+	</div>
+	<!--end -->
+</div>
+
