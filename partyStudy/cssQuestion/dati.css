@@ -1,0 +1,78 @@
+.ic_jiangbei{ background-image:url(../images/jiangbei.png); margin-top:3px;}
+.ic_jiangpai_1{ background-image:url(../images/jiangpai_01.png); height: 24px;}
+.ic_jiangpai_2{ background-image:url(../images/jiangpai_02.png); height: 24px;}
+.ic_jiangpai_3{ background-image:url(../images/jiangpai_03.png); height: 24px;}
+
+.ic_jiangpai_1 em,
+.ic_jiangpai_2 em,
+.ic_jiangpai_3 em{ display: none;}
+
+.img-rounded{ border-radius: 50%; -webkit-border-radius: 50%;}
+
+.weui_btn_yellow{ background-color:#F4C738;}
+.weui_btn_yellow:not(.weui_btn_disabled):active,
+.weui_btn_yellow:not(.weui_btn_disabled):visited{ color:#fff; background-color:#F4C738;}
+.weui_btn_white{ background-color:#fff; color:#333;}
+.weui_btn_white:not(.weui_btn_disabled):active,
+.weui_btn_white:not(.weui_btn_disabled):visited{ color:#333; background-color:#fff;}
+
+.nopadBtm{ padding-bottom: 0;}
+.noMgTop.weui_cells:before{border-top:none;}
+
+.app_page_title{ text-align: center; padding:12px 0; font-size: 18px;}
+.content-margined{background-color:#fff; }
+.app_cells_box .weui_cell_title{ min-height: 48px;}
+.app_top_lead{ padding:10px 40px 10px 10px;  position: relative;}
+.app_top_lead:after{ content:''; background:url(../images/zt.png) top right no-repeat; background-size:cover; width:40px; height: 40px; position: absolute; top: 0; right:0;}
+.app_round{border-radius: 4px; -webkit-border-radius: 4px;}
+.app_cell_pad .weui_cell{ padding:6px 10px;}
+.app_lead{ text-align: center; padding:10px; color:#666; font-size:12px;}
+
+.app_charts{ height: 260px;}
+.topListCharts{width:100%; height:240px;}
+.app_charts .weui_btn{ color: #FF7143; border: 1px solid #FF7143; border-radius: 20px; -webkit-border-radius: 20px; width:140px; font-size: 14px; margin-top:-20px; margin-bottom: 10px;}
+.app_charts .weui_btn:after{border:none;}
+
+.app_btn_box{ padding:10px; text-align: center;}
+.app_btn_box .weui_btn{ font-size: 14px; border-radius: 20px; -webkit-border-radius: 20px; white-space: nowrap;}
+.app_btn_box .weui_btn:after{border:none;}
+
+
+.bg_btm{ width:100%; height: 130px; background:url(../images/bottom_bg.png) left bottom no-repeat; background-size:100% 100%; position: absolute; left: 0; bottom: 0;}
+.bg_btm .app_btn_box{ margin-top:30px;}
+
+.weui-col-50{ width:48%; display: inline-block;  }
+.weui-col-50 .weui_btn{ width:100px;}
+.app_btn_box .weui-col .weui_btn{ display: inline-block;}
+.weui-w-sm{ width:84px;}
+.weui-w-md{ width: 118px;}
+
+.app_note_img{ width:160px; height:160px; margin: 0 auto;}
+
+.weui_msg{ margin-bottom:50px; position: relative; z-index: 99;}
+.weui_msg .weui_btn{ width:120px;}
+
+.app_content_top{ padding:15px 15px 30px 15px; background:#FD7474 url(../images/bolanxian_bg.png) left bottom repeat-x; background-size: contain; color:#FEF0F0;}
+
+.app_split_line{ width:100%; height:34px; margin-top:10px; text-align: center; position: relative;}
+.app_split_line .text{ background-color:#fff; width:120px; position: absolute; top:0 ; left: 50%; margin-left: -60px; z-index: 2;}
+.app_split_line .line{display: block; width:100%; height:1px; overflow: hidden; border-bottom: 1px #d7d7d7 solid; position: absolute; top: 10px; left: 0;}
+
+.app_exam_form{ padding:15px;}
+.app_exam_form .multiRadio .ficon, 
+.app_exam_form .multiRadio .icons{ width:16px; height: 16px; }
+.app_exam_form .multiRadio .ui-txt-warning{ color:#f30;}
+
+.app_information{ padding:15px; }
+.app_information .title{ margin-bottom:10px;}
+.app_information .title .ui-badge{ margin-top:4px; }
+
+.numList{ width:100%; text-align: center;}
+.numList li{ display: inline-block; margin:0 10px; }
+.numList li .num{color:#FF7026; text-align: center;  background-color:#fff; padding:12px 10px; border-radius: 8px; -webkit-border-radius: 8px;}
+
+.xs-screen .app_note_img{width: 100px;   height: 100px;}
+.xs-screen .weui_msg .weui_icon_area{ margin-bottom:0;}
+
+
+

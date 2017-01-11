@@ -1,0 +1,42 @@
+<div id="tpl_rankIteam" style="display: none;">
+	<div class="weui_cell">
+	    <div class="weui_cell_hd"><i class="ic_jiangpai_{top}"><em>{top}</em></i>&nbsp;&nbsp;</div>
+	    <div class="weui_cell_hd"><img {photo} style="width:48px; height: 48px;" class="img-rounded" >&nbsp;&nbsp;</div>
+	    <div class="weui_cell_bd weui_cell_primary">
+	      	<p>{name}</p>
+	    </div>
+	    <div class="weui_cell_ft">{correctNum}分</div>
+	</div>
+</div>
+
+<div class="pageloading" style="display:block;">
+	<img src="../images/loading.gif">
+	<p>加载中</p>
+</div>
+<div id="page_innerContent" class="page_innerContent" style="display:none;">
+	<div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active refresh-top">
+
+		<div class="weui-pull-to-refresh-layer">
+			<div class="pull-to-refresh-arrow"></div>
+			<div class="pull-to-refresh-preloader"></div>
+			<div class="down">下拉刷新</div>
+			<div class="up">释放刷新</div>
+			<div class="refresh">正在刷新...</div>
+		</div>	
+
+		<div class="app_page_title"><i class="ic_jiangbei"></i>&nbsp;&nbsp;排行榜TOP100</div>
+		<div id="J_listGroup" class="weui_cells noMgTop">
+			
+		</div>
+
+	<div class="weui-infinite-scroll resultEnd" style="display: block;">
+		<div class="infinite-preloader"></div>
+		正在加载...
+	</div>
+	<div class="resultEnd_nodata text_center ui-txt-muted" style="display:none;">
+		&nbsp;
+	</div>
+	
+	</div>
+	<!--end -->
+</div>

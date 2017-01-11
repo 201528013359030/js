@@ -1,0 +1,286 @@
+.test-img {
+    width: 50px;
+    height: 50px;
+    background: #777;
+}
+.weui-row {
+    margin-top: 10px;
+}
+
+ul,li{ padding: 0; margin: 0; list-style: none; }
+i{ font-style: normal;}
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color:#F1F2F4;
+}
+.img_response { max-width: 100%;}
+/**
+ * 字体库                                                                         class前缀
+ * 1、weui 字体库                                                       weui_icon_
+ * 2、iconfont-full.ttf 阿里巴巴字体库       ui-icon-
+ * 3、FontAwesome 字体库                                     fa-icon-
+ * 4、图标雪碧  picon-设置图片以及放缩大小，缩小到4s大小时图片展示的效果即可，需要注意在大图时进行调整图标大小
+ * 5、单一图标 ic_  设置图片100% 显示，默认宽高为18
+ */
+@font-face {
+	font-family:FontAwesome;
+	src: url('../font/fontawesome-webfont.eot');
+	src: url('../font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/fontawesome-webfont.woff') format('woff'),
+        url('../font/fontawesome-webfont.ttf')  format('truetype'),
+        url('../font/fontawesome-webfont.svg#fontawesome-webfont') format('svg'); 
+        font-weight: normal;
+        font-style: normal;
+}
+
+.fa-icon,[class^=fa-icon-] {
+	font-family: FontAwesome!important;	font-size: 32px;	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: .2px;
+	display: block;	color: rgba(0,0,0,.5)
+}
+.fa-icon-star:before { content: "\f005";}
+.fa-icon-starEmpty:before { content: "\f006";}
+.fa-icon-angleRight:before { content: "\f105";}
+
+.picon,[class^=picon-]{
+	background:url(../images/picon.png) no-repeat;
+	background-size:288px 288px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.picon-msg{ background-position: -201px -33px; width:24px; height:22px; }
+.picon-msg-other{ background-position: -230px -33px; width:24px; height:22px;}
+.picon-yq-send{ background-position:-80px -117px; width:22px; height:22px;}
+.picon-tu{ background-position:-255px -34px; width:20px; height:20px;}
+.picon-zan{ background-position:-111px -61px; width:18px; height:18px;}
+.picon-comment{ background-position:-131px -62px; width:18px; height:18px;}
+.picon-find{ background-position: -151px -62px; width:18px; height:18px;}
+.picon-book{background-position:-89px -62px; width:14px; height:14px;}
+.picon-people{background-position:-67px -62px; width:16px; height:14px;}
+
+.ic,[class^=ic_]{ display: inline-block; vertical-align: top; width:18px; height:18px; background-size: 100%; background-repeat: no-repeat;}
+.ic_del{ background-image:url(../images/del.png); }
+.ic_location{ background-image:url(../images/icon_location.png);}
+.ic_clock{ background-image:url(../images/icon_clock.png);}
+
+.icon-group{ line-height: 22px; text-align: center;}
+.icon-group-text{ font-size:.75rem; margin-top:-6px; }
+
+.img-responsed{ max-width: 100%;}
+/* weui.css 覆盖部分 */
+a{ color:#00a5e0; }
+.clear{ clear: both;}
+.text_left{ text-align: left;}
+.text_center{ text-align: center;}
+.text_right{ text-align: right;}
+/* 修复 弹出层select在上面的bug */
+.weui-picker-overlay, 
+.weui-picker-container{z-index: 2;}
+
+/*基础设置*/
+.clearfix:before, 
+.clearfix:after { content: " ";  display: table; clear: both; }
+
+.fl{float: left;}
+.fr{ float: right;}
+.hidden{ display: none;}
+
+/*去掉weui默认边距边框等*/
+.noMgTop{ margin-top:0;}
+.nobdbtm,
+.nobdbtm:after{ border-bottom: none;}
+.mg{ margin:20px 0 40px 0;}
+
+/*下拉刷新居住在页顶*/
+.refresh-top{width:100%;}
+.refresh-top.weui-pull-to-refresh{ top:0;}
+.weui_tab_bd .refresh-top.weui_tab_bd_item{ height: 104%;}
+
+/* 导入sui样式区域  */
+.page-group,
+.page,
+.content,
+.content-block{ height:100%;}
+
+/* end sui */
+
+.demos-title { text-align: center;  font-size: 34px;  color: #3cc51f;  font-weight: 400;  margin: 0 15%;}
+.demos-sub-title { text-align: center; color: #888; font-size: 14px;}
+.demos-header { padding: 24px 0;}
+.demos-content-padded {  padding: 15px;}
+.demos-second-title { text-align: center;  font-size: 24px;  color: #3cc51f;  font-weight: 400;  margin: 0 15%;}
+
+.weui_cells_box{ overflow: hidden; background:#f2f2f2;}
+.content-padded { padding: 15px;}
+.weui-pull-to-refresh-warp{ margin-top:-50px; }
+.weui_media_box{ display:block;}
+.weui_media_box.weui_media_appmsg .weui_media_hd_large{ width:100px; height:80px;}
+/**
+ * @ radio3项选择
+ * checkbox 多选的样式
+ */
+.customRadio{position: relative; height:40px;}
+.customRadio > input,
+.customRadio > a {position: absolute;bottom: 0px;width: 32%;cursor: pointer;font-size: 16px;height: 34px;line-height: 34px; white-space: nowrap;}
+.customRadio > input,
+.form-sheet-iteam > input,
+.list_checkbox li >input {opacity: 0;z-index: 50;}
+.customRadio > a,
+.form-sheet-iteam > a,
+.list_checkbox li >a {z-index: 0; color:#333;}
+.customRadio > input:checked + a .icons{ display: none;}
+.customRadio > input:checked + a .ficon{ display: inline-block;}
+.customRadio > input + a .icons{ display: inline-block;}
+.customRadio > input + a .ficon{ display: none;}
+.customRadio .ficon,
+.customRadio .icons{ margin-top:5px; vertical-align: top; margin-right:0;}
+.customRadio .icon-ok{ display: inline-block; width:24px; height:24px; background:url(../images/radioUp.png) no-repeat; background-size:100%;}
+.customRadio .icons-circal{display: inline-block; width:24px; height:24px; background:url(../images/radioUndo.png) no-repeat; background-size:100%;}
+.customRadio .icon-check-ok{ display: inline-block; width:24px; height:24px; background:url(../images/checkboxUp.png) no-repeat; background-size:100%;}
+.customRadio .icons-check-circal{display: inline-block; width:24px; height:24px; background:url(../images/checkboxUndo.png) no-repeat; background-size:100%;}
+
+#radio-man, #radio-man + a {left: 0;}
+#radio-woman, #radio-woman + a {left: 30%;}
+#radio-unknow, #radio-unknow + a {left: 60%;}
+
+.customRadio > input.inp_check,
+.customRadio > a.link_check{ width:100%;}
+
+
+.multiRadio{ border-bottom: 1px #d7d7d7 solid; display: block; width:100%; height: auto;  height: auto; padding:10px 0; position: relative; }
+.multiRadio > input,
+.form-sheet-iteam > input,
+.list_checkbox li >input {opacity: 0;z-index: 50;}
+.multiRadio > input{width:100%; height:100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+.multiRadio > a .text{display: block; padding-left:30px; color:#333; }
+.multiRadio > input:checked + a .icons{ display: none;}
+.multiRadio > input:checked + a .ficon{ display: inline-block;}
+.multiRadio > input + a .icons{ display: inline-block;}
+.multiRadio > input + a .ficon{ display: none;}
+.multiRadio .ficon,
+.multiRadio .icons{ margin-top:15px; vertical-align: top; margin-right:0; position: absolute; left: 0; top: 0;}
+.multiRadio .icon-ok{ display: inline-block; width:24px; height:24px; background:url(../images/radioUp.png) no-repeat; background-size:100%;}
+.multiRadio .icons-circal{display: inline-block; width:24px; height:24px; background:url(../images/radioUndo.png) no-repeat; background-size:100%;}
+.multiRadio .icon-check-ok{ display: inline-block; width:24px; height:24px; background:url(../images/checkboxUp.png) no-repeat; background-size:100%;}
+.multiRadio .icons-check-circal{display: inline-block; width:24px; height:24px; background:url(../images/checkboxUndo.png) no-repeat; background-size:100%;}
+
+
+/* end  radio3项选择 */
+
+.row-tab{background-color:#f3f3f3; color:#a4a4a4; border-top:1px #ebecee solid; border-bottom:1px #e8eae9 solid; padding:0 10px; font-size:.875em; margin-bottom:20px;}
+.row-tab-nobd{font-size:.875em; height:1.5rem; background-color:#f3f3f3; padding:0 10px;}
+.row-tab-thin{height: .375rem; background:#f3f3f3;}
+.row-tab-half{ width:24%; text-align: center; background:#029DDD; margin-top:12px;}
+
+.picGroup{background:#fff;}
+.picGroup .pic_iteam{ width: 50px; margin:0 .375rem .375rem .375rem; display: inline-block; vertical-align: top; position: relative;}
+.picGroup .pic_iteam .pic{ width: 50px; border-radius: 50%; -webkit-border-radius: 50%;}
+.picGroup .pic_iteam .icon{ position: absolute; right:-2px; top: 0px; background-color: #F7A5AA; border-radius: 50%; -webkit-border-radius: 50%; width:18px; height: 18px;}
+.picGroup .pic_iteam .name{ display: block; width: 50px; height:20px; text-align: center; font-size:14px; color: #888; overflow: hidden;}
+
+/* @ swiper 图片切换、
+ * swiper-container 为外框的高度 
+ */
+.swiper-container-textDemo{ height:400px; }
+.swiper-container-textDemo .swiper-slide{ position: relative; text-align: center;}
+.swiper-container-textDemo .swiper-slide .slide-bg{height:100%;}
+
+.home-promo { color: #f8f8f8;  padding-top: 50px;  position: relative;  z-index: 10;}
+.home-promo .title {
+  font-size: 24px;  font-family: Microsoft Yahei, arial, sans-serif;  font-weight: 200;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 45px;
+  text-transform: uppercase;
+}
+.home-promo .title span {  display: block;}
+.home-promo .upper{ font-size:36px;}
+.home-promo .title .middle {  margin-top: 20px;  margin-bottom: 20px;  font-size: 32px;  color: #f8f8f8;}
+.home-promo .title .bottom { font-family: 'Merriweather Sans', arial, sans-serif;  font-style: italic;  text-transform: lowercase;  font-weight: 500;}
+.home-promo .btn { font-size: 20px; font-weight: normal;}
+a.btn-cta-primary, 
+.btn-cta-primary { background: #eea740; border: none; color: #fff;}
+
+.swiper-container-textDemo .swiper-slide1{ background:#071D56 url(../images/temp/bg1.jpg) no-repeat center center; background-size:cover;}
+.swiper-container-textDemo .swiper-slide2{ background:#1368E0 url(../images/temp/bg2.jpg) no-repeat center center;background-size:cover;}
+.swiper-container-textDemo .swiper-slide3{ background:#1872E4 url(../images/temp/bg3.jpg) no-repeat center center;background-size:cover;}
+/* end  swiper 图片切换 */
+
+.lead{ margin: 10px; border-left:4px #ED8608 solid; padding:10px; background:#FCE8B9;}
+.footer{text-align: center; color:#999; padding:.875rem 0; font-size: .75rem;}
+label.error{ font-size:12px; color:#F43530;}
+.weui_cell_tops, .weui_media_box.weui_media_appmsg.weui_cell_tops {
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+
+.weui_cells_title{padding-top:0; font-weight: bold; color:#666;}
+
+.noboxbd.weui_cells:before,
+.noboxbd.weui_cells:after{ border-top:none; border-bottom:none;}
+
+.nobd.weui_cells:before,
+.nobd.weui_cells:after{ border-top:none; border-bottom:none;}
+.nobd.weui_cells .weui_cell:before{ border-top:none;}
+
+a.weui_cell{ color:#000;}
+.weui_cell_title{ font-size: 14px; font-weight: bold; line-height:24px;}
+.weui_cell_desc{ color: #999999; font-size: 13px; line-height: 1.5;}
+.weui_btn.weui_btn_mini.weui_cell_btn{ line-height: 1.25; font-size: 13px;}
+
+/* 图文列表 */
+.content-margined{ margin:10px;}
+.content-title{ padding:0 14px; height: 22px;}
+.content-title .fa-icon, .content-title [class^=fa-icon-],
+.content-title .picon, .content-title [class^=picon-]{
+	display: inline-block; vertical-align: top; font-size:.75rem; color:#FE913E; margin-top:2px;
+}
+.content-title .align-left{ float: left; font-weight: bold;}
+.content-title .align-right{ float: right; color:#FE913E;}
+
+.shareBox{border-radius: 6px; -webkit-border-radius: 6px;}
+.shareBox .weui_media_title .subtit{ font-style: normal; color:#FE913E; font-size:.625rem; }
+.shareBox .share_media_title{ font-size: .75rem;}
+.shareBox .share_media_title i{ margin-left:10px; margin-top:2px;}
+.shareBox .share_media_desc{ display: block; font-size:13px; margin-bottom:14px;}
+.shareBox .share_media_desc .fcIm{ padding-left:10px;}
+.shareBox .share-ul li{ width:24%;}
+.shareBox .share-ul li img{ width:100%; border-radius: 4px; -webkit-border-radius: 4px;}
+
+.weui_media_box.weui_media_text .share_media_btm{height:18px; line-height: 18px; text-align: center; background: #ebebeb;}
+.weui_media_box.weui_media_text .share_media_btm .weui_media_info_meta{ display: inline-block; width:33%; padding:4px 0 0 0; }
+
+.settingBox.weui_panel:first-child{margin-top:10px;}
+.settingBox .weui_media_title{ border-bottom:1px #d9d9d9 solid;}
+.settingBox .weui_media_box p{font-size:.75rem;}
+.settingBox .weui_media_box p i{ display: inline-block; vertical-align: top; margin-right:10px; line-height: 1.2; font-size:.875rem;}
+.settingBox .weui_media_desc{ padding-left:16px;}
+.settingBox .weui_cell:before{ border: none;}
+
+.extCon p img{ max-width: 100%; margin:0 auto; display: block;}
+
+.freightUl{ margin-left:2em;}
+.freightUl li{ border-left:1px #E1E1E1 solid; padding:0 .875em .875em 1.875em;  position:relative; list-style: none;}
+.freightUl li .note{ display:block; width:.625em; height:.625em; position:absolute; top:.375em; left:-.325em; background:#E1E1E1;
+	-moz-border-radius: 10px;      
+    -webkit-border-radius: 10px;  
+    border-radius:10px;}
+.freightUl li .date{ color: #999; font-size: .875rem;}
+.freightUl li .type{ padding-left:.5em;}
+.freightUl .mcurrent .note{ width:.75em; height:.75em; border:.125em #D1EAFC solid; left:-.475em; top:0; background:#3e90ca;}
+.freightUl .mcurrent {color:#3e90ca;}
+
+.pageloading{width:80px; height: 80px; font-size: 12px; text-align: center; color:#898989; position:absolute; top: 46%; left: 50%; margin-left: -40px;}
+
+
+
+
+
+
+
+
+
