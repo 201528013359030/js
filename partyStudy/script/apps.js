@@ -299,6 +299,7 @@ var partyStudyQuestionSummary= {};
 partyStudyQuestionSummary.partial = "../html/temp/partyStudyQuestionSummary.html";
 partyStudyQuestionSummary.init = function(){
     miniSPA.render("partyStudyQuestionSummary");
+    
     if($("#page_innerContent")[0]) {
 
         var flag_home = true; //是否继续加载

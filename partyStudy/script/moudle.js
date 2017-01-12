@@ -64,7 +64,8 @@ function setListIteam(page){
 			.replace( /\{time\}/g,getList.list[i].ytime )
 			.replace( /\{readd\}/g,getList.list[i].readd )
 			.replace( /\{display\}/g,display )
-			.replace( /\{matertype\}/g,getList.list[i].matertype||"学习材料" );
+			.replace( /\{matertype\}/g,getList.list[i].matertype||"学习材料" )
+			.replace(/\{answerCount\}/g,getList.list[i].answerCount);
 		
 //		alert(html_iteam);
 		
