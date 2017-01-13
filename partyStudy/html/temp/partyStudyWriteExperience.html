@@ -49,10 +49,68 @@
     .ui-icon-add:before{
         content:"\f615";
     }
+
+
+    .inpBox .btnAtta{
+        background-color: #f2f2f2;
+        color:#444;
+        width:90%;
+        display: inline-block;
+        vertical-align: top;
+        padding:4px 10px;
+        cursor:pointer;
+        overflow: hidden;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        position: relative;
+    }
+    .inpBox .btnAtta .ui-icon{
+        font-size: 15px;
+        line-height: inherit;
+        vertical-align: top;
+    }
+    .inpBox .btnAtta .btnfile{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 40px;
+        -webkit-appearance : none ;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+        -moz-tap-highlight-color:rgba(0,0,0,0);
+        tap-highlight-color:rgba(0,0,0,0);
+        opacity: 0;
+    }
+    .inpBox .btnAtta .ic_atta{
+        color:#444;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
 </style>
 <div class="party-write-experience-box">
     <textarea class="party-write-experience" spellcheck="true">写心得...</textarea>
 </div>
+
+<div class="weui_cells_title">可上传附件</div>
+<div class="weui_cells weui_cells_form">
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">附件</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <div id="J_uploadAttach" class="inpBox">
+                <div class="btnAtta">
+                    <i class="ui-icon-gototop ui-icon "></i>
+                    <span class="ic_text">上传附件</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="J_attachList"><!--显示附件--></div>
+</div>
+
+<div class="content-padded">
+    <button id="J_requestUpdate" class="weui_btn weui_btn_primary">提交</button>
+</div>
+<!--
 <div class="party-write-experience-attachment">
     <div class="party-write-experience-attachment1">
         <img src="../images/icon/party-study-experience2.png">
@@ -74,3 +132,4 @@
         <button class="weui_btn weui_btn_warn">完成</button>
     </div>
 </div>
+-->

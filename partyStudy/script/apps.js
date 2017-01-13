@@ -418,18 +418,117 @@ var partyStudyWriteExperience = {};
 partyStudyWriteExperience.partial = "../html/temp/partyStudyWriteExperience.html";
 partyStudyWriteExperience.init = function(){
     miniSPA.render("partyStudyWriteExperience");
-    $(document).ready(function(){
-        var winWidth = $(window).width();
-        $('.party-task-button-box').css('width',winWidth);
-        window.onresize = function(){
-            var winWidth = $(window).width();
-            $('.party-task-button-box').css('width',winWidth);
-        };
-        $('.party-write-experience').focus(function(){
-            $(this).html(null).css('color','#666');
-        })
-    })
+    /*$(document).ready(function(){
+     var winWidth = $(window).width();
+     $('.party-task-button-box').css('width',winWidth);
+     window.onresize = function(){
+     var winWidth = $(window).width();
+     $('.party-task-button-box').css('width',winWidth);
+     };
+     $('.party-write-experience').focus(function(){
+     $(this).html(null).css('color','#666');
+     });
+     $('#attachmentAdd').change(function(){//<input name="" type="file" id="fil"/>
+     str=$(this).val();
+     alert(str);
+     //$('.party-attachment-name').html(str);
+     })
+     })*/
+    var userInfo = getUserinfo();
+
+    $("#contact").val(userInfo.mobile);
+    $("#userName").val(userInfo.username);
+    $("#companyName").val(userInfo.company);
+
+    commonFun.load_page("#page_innerContent"); //loading加载
+
+    $("#sel-questionType").select({
+        title: "选择反馈类型",
+        items: requestType
+    });
+
+    $("#J_uploadAttach").on("click",function(){
+        chooseSheetPhoto();
+    });
+    $(document).on("click",".J_delAttach",function(){
+        var obj = this;
+        $.confirm("您确定要删除文件吗?", "确认删除?", function() {
+            $.toast("文件已经删除!");
+            $(obj).remove();
+        }, function() {
+            //取消操作
+        });
+    });
+
+    $("#J_requestUpdate").on("click",function(){
+        var title = $("#title").val();
+        var content = $("#content").val();
+        var contact = $("#contact").val();
+        //新增基本信息
+        var senderName = $("#userName").val();
+        var company = $("#companyName").val();
+        var type = $("#sel-questionType").val();
+        var type_value=$("#sel-questionType").attr("data-values");
+        var files = [];
+        var attachs = $("#J_attachList .J_delAttach");
+        if(attachs.length>0){
+            for(var i=0;i<attachs.length;i++){
+                var _file = {};
+                _file["name"]=attachs.eq(i).attr("data-name");
+                _file["size"]=attachs.eq(i).attr("data-size");
+                _file["path"]=attachs.eq(i).attr("data-path");
+                //files[i]=_file;
+                files.push(_file);
+            }
+        }
+        if(!type){
+            $.toast("反馈类型不能为空","cancel");
+            return false;
+        }
+        if(!title){
+            $.toast("标题不能为空","cancel");
+            return false;
+        }
+
+        if(title.length<4||title.length>31){
+            $.toast("标题至少4个字，最多30字","cancel");
+            return false;
+        }
+        if(!content){
+            $.toast("详细说明不能为空","cancel");
+            return false;
+        }
+        if(!contact){
+            $.toast("联系方式不能为空","cancel");
+            return false;
+        }
+
+        var reg_phone = /^1\d{10}$/;
+        if( !reg_phone.test(contact) ){
+            $.toast("手机格式不正确","cancel");
+            return false;
+        }
+
+//		var reg_tel = /^0\d{2,3}-?\d{7,8}$/;
+//		var reg_email =/^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/ ;
+//		if( !reg_phone.test(contact)&&!reg_email.test(contact)&&!reg_tel.test(contact)){
+//			$.toast("请输入正确的联系方式","cancel");
+//			return false;
+//		}
+        $("#J_requestUpdate").attr("disabled","true");
+        var parameter = {"title":title,"type":type_value,"content":content,"contact":contact,"senderName":senderName,"company":company,"file":files};
+        console.log(parameter);
+        var isupdate = updateRequest(parameter);
+        if(isupdate.succeed==1){
+            $.toast("已经提交成功!");
+            window.location.replace("#home");
+        }else{
+            $.toast("提交失败，请重试!");
+            $("#J_requestUpdate").attr("disabled","false");
+        }
+    });
 }
+
 
 var partyLeaderInspection = {};
 partyLeaderInspection.partial = "../html/temp/partyLeaderInspection.html";
