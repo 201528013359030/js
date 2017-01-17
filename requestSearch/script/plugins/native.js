@@ -321,6 +321,7 @@ API.init();
 		 * */
 		upload:function(parameter){
 			var op_upload = {
+					
 				"name": "Upload", 
 		        "callback": parameter.callback||"OnUploadCb", 
 		        "params": {
@@ -330,7 +331,7 @@ API.init();
 		            "suffix":parameter.suffix||""
 		        }
 			};
-			API.send_tonative(op_upload);			
+			API.send_tonative(op_upload);
 		},
 		/*
 		 * 弹出提示信息

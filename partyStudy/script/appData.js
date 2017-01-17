@@ -10,21 +10,6 @@
 	status	false	string	0未处理，1已处理
  */
 
-//渲染生成附件
-function renderAttach( results ){
-	
-	var tpl = $("#tpl_attach").html();
-	var html =[];
-	for(var i=0; i<results.length; i++){
-		var _html = tpl
-		.replace( /\{name\}/g,results[i].name )
-		.replace( /\{size\}/g,results[i].size )
-		.replace( /\{path\}/g,results[i].path);
-		html.push(_html);
-	}
-	return html;
-}
-
 // 文件上传
 function upLoad(){
 	var transferid = parseInt(new Date().getTime()/1000);
@@ -59,17 +44,19 @@ if(params){
 	console.log(JSON.stringify(datas));
 }
 
-//上传
 
-
-
-
-
-
-
-
-
-
-
-
+//渲染生成附件
+function renderAttach( results ){
+	
+	var tpl = $("#tpl_attach").html();
+	var html =[];
+	for(var i=0; i<results.length; i++){
+		var _html = tpl
+		.replace( /\{name\}/g,results[i].name )
+		.replace( /\{size\}/g,results[i].size )
+		.replace( /\{path\}/g,results[i].path);
+		html.push(_html);
+	}
+	return html;
+}
 

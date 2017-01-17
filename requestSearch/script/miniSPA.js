@@ -16,7 +16,7 @@ miniSPA.changeUrl = function(){
 		attrID = str[1],
 		attrCon = str[2];
 	if(url ===""){
-		url = "home";
+		url = "form";
 	}
 	if(!window[url]){ //检查window窗口中有没有url所指定的框架名称 --fyq
 		url="notfound";		
